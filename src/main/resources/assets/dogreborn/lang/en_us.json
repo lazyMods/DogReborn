@@ -1,0 +1,7 @@
+{
+  "message.on_death": "§6DogReborn:§r Be careful! Your dog only have %s lives! %s may help you with this. %s, %s, %s",
+  "message.on_death_no_live": "§6DogReborn:§r Poor doggy! RIP.",
+  "message.on_interact_add": "§6DogReborn:§r You increased your dog lives! (%s/%s)",
+  "message.on_interact": "§6DogReborn:§r Can't add more lives to this doggy! Max: %s",
+  "message.on_tame": "§6DogReborn:§r Congrats! You now have a new puppy! Consider giving it a %s so he can live longer!"
+}
