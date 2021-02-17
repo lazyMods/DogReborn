@@ -1,6 +1,5 @@
-package lazy.dogreborn.event;
+package lazy.dogreborn;
 
-import lazy.dogreborn.Configs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.passive.TameableEntity;

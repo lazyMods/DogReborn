@@ -1,4 +1,4 @@
-package lazy.dogreborn.event;
+package lazy.dogreborn;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.CompoundNBT;
@@ -7,11 +7,9 @@ import net.minecraft.util.math.vector.Vector3i;
 public class Utils {
 
     public static Vector3i getPlayerSpawnPos(PlayerEntity entity){
-        System.out.println(entity.getPersistentData());
         int x = entity.getPersistentData().getInt("SpawnX");
         int y = entity.getPersistentData().getInt("SpawnY");
         int z = entity.getPersistentData().getInt("SpawnZ");
-        System.out.println(String.format("x %s, y %s, z %s", x, y, z));
         return new Vector3i(x, y, z);
     }
 
