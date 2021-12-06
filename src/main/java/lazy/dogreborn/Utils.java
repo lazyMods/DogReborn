@@ -1,27 +1,28 @@
 package lazy.dogreborn;
 
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.util.math.vector.Vector3i;
+import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.phys.Vec3;
 
 public class Utils {
 
-    public static Vector3i getPlayerSpawnPos(PlayerEntity entity){
+    public static BlockPos getPlayerSpawnPos(Player entity) {
         int x = entity.getPersistentData().getInt("SpawnX");
         int y = entity.getPersistentData().getInt("SpawnY");
         int z = entity.getPersistentData().getInt("SpawnZ");
-        return new Vector3i(x, y, z);
+        return new BlockPos(x, y, z);
     }
 
-    public static Vector3i readVector3i(CompoundNBT nbt){
-        return new Vector3i(nbt.getInt("x"), nbt.getInt("y"), nbt.getInt("z"));
+    public static Vec3 readVector3i(CompoundTag nbt) {
+        return new Vec3(nbt.getDouble("x"), nbt.getDouble("y"), nbt.getDouble("z"));
     }
 
-    public static CompoundNBT writeVector3i(Vector3i vector3i){
-        CompoundNBT nbt = new CompoundNBT();
-        nbt.putInt("x", vector3i.getX());
-        nbt.putInt("y", vector3i.getY());
-        nbt.putInt("z", vector3i.getZ());
+    public static CompoundTag writeBlockPos(BlockPos blockPos) {
+        CompoundTag nbt = new CompoundTag();
+        nbt.putDouble("x", blockPos.getX());
+        nbt.putDouble("y", blockPos.getY());
+        nbt.putDouble("z", blockPos.getZ());
         return nbt;
     }
 }
